@@ -39,8 +39,8 @@ Here are further instructions on how to execute the code.
 
 You first clone this repository 
 ```bash
-git clone https://github.com/kevincharbonneau/ ....
-cd ....
+git https://github.com/kevincharbonneau/the-100-prisoners-riddle.git
+cd the-100-prisoners-riddle
 ```
 
 Then you want to install the python packages
