@@ -7,15 +7,17 @@ from typing import List
 class Prisoner:
     number: int
 
+
 @dataclass
 class Box:
     paper_number: int
     box_number: int
 
+
 class Room:
     _boxes: List[Box]
 
-    def __init__(self, count:int) -> None:
+    def __init__(self, count: int) -> None:
         papers = list(range(1, count + 1))
         shuffle(papers)
 
@@ -25,7 +27,7 @@ class Room:
         for i, box in enumerate(self.boxes):
             if box.box_number == box_number:
                 return i
-    
+
     def look(self, box_number: int):
         index = self._find(box_number)
         return index, self._boxes[index].paper_number
@@ -37,11 +39,12 @@ class Room:
     def boxes(self):
         return self._boxes
 
+
 class Prison:
     _prisoners: List[Prisoner]
     _max: int
 
-    def __init__(self, count:int) -> None:
+    def __init__(self, count: int) -> None:
         self._max = count
         self._prisoners = [Prisoner(i + 1) for i in range(count)]
 

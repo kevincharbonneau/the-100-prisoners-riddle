@@ -15,5 +15,5 @@ def simulate(count: int, strategy: Callable):
         found = strategy(prisoner, room, try_count)
         if not found:
             return False
-    
+
     return True
